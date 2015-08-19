@@ -2,6 +2,7 @@ package com.example.audioplayer;
 
 import java.io.IOException;
 
+import android.app.Fragment;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -17,13 +18,13 @@ public class MainActivity extends ActionBarActivity {
 	String urlArquivo = "http://cast.onepieceex.com.br/opexcast_37_-_conveses_do_mundo.mp3";
 	MediaPlayer media;
 	boolean isPlaying = false;
+	Fragment fragment;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		title = (TextView)findViewById(R.id.titulo);
 		play = (Button)findViewById(R.id.play);
 		stop = (Button)findViewById(R.id.stop);
 		
